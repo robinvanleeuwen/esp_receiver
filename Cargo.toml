@@ -1,0 +1,20 @@
+[package]
+name = "esp-receiver"
+version = "0.1.0"
+authors = ["Robin van Leeuwen <robin@mintlab.nl>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "esp_receiver"
+path = "src/esp_receiver/lib.rs"
+
+[[bin]]
+name = "esp-receiver"
+path = "src/bin.rs"
+
+[dependencies]
+chrono = "0.4.11"
+diesel = { git = "https://github.com/diesel-rs/diesel", features = ["postgres", "chrono"] }
+dotenv = "0.15.0"
